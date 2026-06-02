@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faculty Search Co-Pilot | Rice University Vice Provost for Academic Affairs</title>
+  <meta name="description" content="An AI-powered analytics platform supporting equitable faculty hiring and search committee decision-making at Rice University." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=14" />
+</head>
+<body>
+
+  <!-- ============= HEADER ============= -->
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="index.html" class="brand" aria-label="Rice University — Vice Provost for Academic Affairs home">
+        <img class="brand__lockup" src="assets/rice-lockup.png?v=4" alt="Rice University — Vice Provost for Academic Affairs" />
+      </a>
+
+      <div class="site-header__actions">
+        <button class="icon-btn" type="button" aria-label="Share this page">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.4" />
+            <circle cx="7" cy="12" r="1.8" fill="currentColor" />
+            <circle cx="15.5" cy="7.5" r="1.8" fill="currentColor" />
+            <circle cx="15.5" cy="16.5" r="1.8" fill="currentColor" />
+            <line x1="8.6" y1="11.1" x2="14" y2="8.4" stroke="currentColor" stroke-width="1.2" />
+            <line x1="8.6" y1="12.9" x2="14" y2="15.6" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.4" />
+            <circle cx="11" cy="11" r="3.6" fill="none" stroke="currentColor" stroke-width="1.4" />
+            <line x1="13.7" y1="13.7" x2="16.5" y2="16.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+          </svg>
+        </button>
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">
+          <span class="menu-btn__label">MENU</span>
+          <span class="menu-btn__icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <nav id="primary-menu" class="primary-menu" hidden aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Open Positions</a></li>
+        <li><a href="dashboard.html">Co-Pilot Dashboard</a></li>
+        <li><a href="dashboard.html#analytics">Analytics</a></li>
+        <li><a href="dashboard.html#ai-insights">AI Insights</a></li>
+        <li><a href="dashboard.html#architecture">Platform</a></li>
+        <li><a href="#admin">Administration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============= HERO ============= -->
+  <section class="hero" aria-labelledby="hero-title">
+    <img class="hero__image" src="assets/rice-campus.png" alt="" aria-hidden="true" />
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <h1 id="hero-title" class="hero__title">
+        <span class="hero__title--accent">FACULTY</span><span class="hero__title--plain"> SEARCH CO-PILOT</span>
+      </h1>
+    </div>
+
+    <div class="hero__breadcrumb" aria-label="Breadcrumb">
+      <span>/</span>
+      <span class="hero__breadcrumb-sep">&gt;</span>
+      <span>FACULTY</span>
+      <span class="hero__breadcrumb-sep">&gt;</span>
+      <span>SEARCH CO-PILOT</span>
+    </div>
+  </section>
+
+  <!-- ============= SECONDARY NAV ============= -->
+  <nav class="secondary-nav" aria-label="Section">
+    <ul class="secondary-nav__list">
+      <li><a href="index.html" class="is-active">Open Positions</a></li>
+      <li aria-hidden="true" class="secondary-nav__sep">|</li>
+      <li><a href="dashboard.html">Co-Pilot Dashboard</a></li>
+      <li aria-hidden="true" class="secondary-nav__sep">|</li>
+      <li><a href="dashboard.html#analytics">Analytics</a></li>
+      <li aria-hidden="true" class="secondary-nav__sep">|</li>
+      <li><a href="dashboard.html#ai-insights">AI Insights</a></li>
+      <li aria-hidden="true" class="secondary-nav__sep">|</li>
+      <li><a href="dashboard.html#architecture">Platform</a></li>
+      <li aria-hidden="true" class="secondary-nav__sep">|</li>
+      <li><a href="#admin">Administration</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============= MAIN ============= -->
+  <main class="page">
+
+    <!-- Intro -->
+    <section class="intro" aria-labelledby="intro-title">
+      <h2 id="intro-title" class="intro__title">Faculty Open Positions</h2>
+      <ul class="intro__links">
+        <li><a href="#">Rice Benefits at a Glance</a></li>
+        <li><a href="#">Visit Houston</a></li>
+      </ul>
+      <p class="intro__lede">
+        The Faculty Search Co-Pilot consolidates Rice's active faculty searches in
+        one place and equips committees with AI-supported analytics for equitable,
+        well-informed decisions.
+      </p>
+      <p class="intro__meta">
+        For some openings in the Mathematics Department, please visit <a href="https://www.mathjobs.org" target="_blank" rel="noopener">mathjobs.org</a>.<br />
+        For questions, please contact the posting department or fill out our <a href="#">Help Desk form</a>.
+      </p>
+
+      <!-- Dashboard CTA banner -->
+      <a href="dashboard.html" class="dashboard-cta" aria-label="Open the Faculty Search Co-Pilot Dashboard">
+        <div class="dashboard-cta__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <rect x="3"  y="3"  width="8" height="8"  fill="currentColor" rx="1" />
+            <rect x="13" y="3"  width="8" height="4"  fill="currentColor" rx="1" opacity="0.55" />
+            <rect x="13" y="9"  width="8" height="12" fill="currentColor" rx="1" />
+            <rect x="3"  y="13" width="8" height="8"  fill="currentColor" rx="1" opacity="0.55" />
+          </svg>
+        </div>
+        <div class="dashboard-cta__body">
+          <div class="dashboard-cta__eyebrow">CO-PILOT DASHBOARD</div>
+          <div class="dashboard-cta__title">Open the analytics workspace</div>
+          <div class="dashboard-cta__text">Live applicant metrics, IPEDS benchmarking, AI-assisted search insights, and committee reports.</div>
+        </div>
+        <div class="dashboard-cta__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 12 H19 M13 6 L19 12 L13 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </a>
+    </section>
+
+    <!-- Open Positions Cards -->
+    <section class="positions" id="open-searches" aria-label="Open faculty positions">
+      <div class="positions__grid">
+
+        <article class="position">
+          <div class="position__header">2025-12-01 &nbsp;-&nbsp; Rice Advanced Materials Institute</div>
+          <div class="position__body">
+            <h3 class="position__title">Assistant or Associate Professor of Advanced Computational Materials</h3>
+            <a href="#" class="btn btn--primary position__btn">View Details</a>
+          </div>
+        </article>
+
+        <article class="position">
+          <div class="position__header">2026-01-28 &nbsp;-&nbsp; Electrical and Computer Engineering</div>
+          <div class="position__body">
+            <h3 class="position__title">Open Rank Teaching Track Faculty Position</h3>
+            <a href="#" class="btn btn--primary position__btn">View Details</a>
+          </div>
+        </article>
+
+        <article class="position">
+          <div class="position__header">2026-01-29 &nbsp;-&nbsp; Computer Science</div>
+          <div class="position__body">
+            <h3 class="position__title">Professor of Computer Science</h3>
+            <a href="#" class="btn btn--primary position__btn">View Details</a>
+          </div>
+        </article>
+
+        <article class="position">
+          <div class="position__header">2026-03-03 &nbsp;-&nbsp; Computational Applied Mathematics and Operations Research</div>
+          <div class="position__body">
+            <h3 class="position__title">Professor and Department Chair of Computational Applied Mathematics and Operations Research</h3>
+            <a href="#" class="btn btn--primary position__btn">View Details</a>
+          </div>
+        </article>
+
+        <article class="position">
+          <div class="position__header">2026-04-14 &nbsp;-&nbsp; Rice Business School</div>
+          <div class="position__body">
+            <h3 class="position__title">Lecturer of Accounting</h3>
+            <a href="#" class="btn btn--primary position__btn">View Details</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Administration -->
+    <section class="admin-strip" id="admin" aria-labelledby="admin-title">
+      <div class="admin-strip__inner">
+        <div>
+          <h2 id="admin-title" class="admin-strip__title">Administration &amp; Access</h2>
+          <p class="admin-strip__text">Search-committee chairs, deans, and department coordinators may request access through the Office of the Vice Provost for Academic Affairs. The platform follows Rice's information-security and applicant-confidentiality standards.</p>
+        </div>
+        <div class="admin-strip__actions">
+          <a href="dashboard.html" class="btn btn--primary">Open Dashboard</a>
+          <a href="#" class="btn btn--ghost">Request Access</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============= FOOTER ============= -->
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="site-footer__top-inner">
+        <h2 class="footer-helpful">
+          <span class="footer-helpful__accent">Helpful</span> Links
+        </h2>
+        <ul class="footer-links">
+          <li><a href="#">Provost's Office</a></li>
+          <li><a href="#">University Policies</a></li>
+          <li><a href="#">Faculty Senate</a></li>
+          <li><a href="#">Faculty Handbook</a></li>
+          <li><a href="#">Fondren Library</a></li>
+          <li><a href="#">Research Repository</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="#">Faculty Club</a></li>
+          <li><a href="#">Faculty Ombuds Office</a></li>
+          <li><a href="#">General Announcement</a></li>
+          <li><a href="#">Visit Houston</a></li>
+          <li><a href="#">VPAA Help Desk</a></li>
+          <li><a href="#">Interfolio</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="site-footer__bottom-inner">
+        <a href="https://www.rice.edu" class="site-footer__wordmark" aria-label="Rice University">
+          <img src="assets/rice-university-logo-trimmed.png?v=7" alt="Rice University" />
+        </a>
+        <div class="site-footer__address">
+          <div class="site-footer__address-line">
+            6100 Main St., Houston, TX 77005-1827 &nbsp;|&nbsp; Mailing Address: P.O. Box 1892, Houston, TX 77251-1892 &nbsp;|&nbsp; 713-348-0000
+          </div>
+          <div class="site-footer__address-links">
+            <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Campus Carry</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=9"></script>
+</body>
+</html>

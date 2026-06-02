@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Co-Pilot Dashboard | Faculty Search Co-Pilot | Rice University</title>
+  <meta name="description" content="Analytics, AI insights, and platform information for the Rice Faculty Search Co-Pilot." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=14" />
+</head>
+<body>
+
+  <!-- ============= HEADER ============= -->
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="index.html" class="brand" aria-label="Rice University — Vice Provost for Academic Affairs home">
+        <img class="brand__lockup" src="assets/rice-lockup.png?v=4" alt="Rice University — Vice Provost for Academic Affairs" />
+      </a>
+
+      <div class="site-header__actions">
+        <button class="icon-btn" type="button" aria-label="Share this page">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.4" />
+            <circle cx="7" cy="12" r="1.8" fill="currentColor" />
+            <circle cx="15.5" cy="7.5" r="1.8" fill="currentColor" />
+            <circle cx="15.5" cy="16.5" r="1.8" fill="currentColor" />
+            <line x1="8.6" y1="11.1" x2="14" y2="8.4" stroke="currentColor" stroke-width="1.2" />
+            <line x1="8.6" y1="12.9" x2="14" y2="15.6" stroke="currentColor" stroke-width="1.2" />
+          </svg>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.4" />
+            <circle cx="11" cy="11" r="3.6" fill="none" stroke="currentColor" stroke-width="1.4" />
+            <line x1="13.7" y1="13.7" x2="16.5" y2="16.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+          </svg>
+        </button>
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-menu">
+          <span class="menu-btn__label">MENU</span>
+          <span class="menu-btn__icon" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <nav id="primary-menu" class="primary-menu" hidden aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Open Positions</a></li>
+        <li><a href="dashboard.html">Co-Pilot Dashboard</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+        <li><a href="#ai-insights">AI Insights</a></li>
+        <li><a href="#architecture">Platform</a></li>
+        <li><a href="index.html#admin">Administration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============= HERO ============= -->
+  <section class="hero hero--short" aria-labelledby="hero-title">
+    <img class="hero__image" src="assets/rice-campus.png" alt="" aria-hidden="true" />
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <h1 id="hero-title" class="hero__title">
+        <span class="hero__title--accent">CO-PILOT</span><span class="hero__title--plain"> DASHBOARD</span>
+      </h1>
+    </div>
+
+    <div class="hero__breadcrumb" aria-label="Breadcrumb">
+      <span>/</span>
+      <span class="hero__breadcrumb-sep">&gt;</span>
+      <span>FACULTY</span>
+      <span class="hero__breadcrumb-sep">&gt;</span>
+      <span>SEARCH CO-PILOT</span>
+      <span class="hero__breadcrumb-sep">&gt;</span>
+      <span>DASHBOARD</span>
+    </div>
+  </section>
+
+  <!-- ============= SECONDARY NAV ============= -->
+  <nav class="secondary-nav" aria-label="Section">
+    <ul class="secondary-nav__list">
+      <li><a href="index.html">Open Positions</a></li>
+      <li aria-hidden="true" class="secondary-nav__sep">|</li>
+      <li><a href="dashboard.html" class="is-active">Co-Pilot Dashboard</a></li>
+      <li aria-hidden="true" class="secondary-nav__sep">|</li>
+      <li><a href="#analytics">Analytics</a></li>
+      <li aria-hidden="true" class="secondary-nav__sep">|</li>
+      <li><a href="#ai-insights">AI Insights</a></li>
+      <li aria-hidden="true" class="secondary-nav__sep">|</li>
+      <li><a href="#architecture">Platform</a></li>
+      <li aria-hidden="true" class="secondary-nav__sep">|</li>
+      <li><a href="index.html#admin">Administration</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============= MAIN ============= -->
+  <main class="page">
+
+    <section class="intro" aria-labelledby="intro-title">
+      <h2 id="intro-title" class="intro__title">Co-Pilot Dashboard</h2>
+      <p class="intro__lede">
+        Live indicators across Rice's active faculty hiring cycle. Figures refresh
+        nightly from Interfolio, IPEDS, and Rice HR. Use the AI assistant below to
+        drill into a specific search, generate committee reports, or benchmark
+        against peer institutions.
+      </p>
+      <p class="intro__meta">
+        <a href="index.html">&larr; Back to Faculty Open Positions</a>
+      </p>
+    </section>
+
+    <!-- Analytics -->
+    <section class="analytics" id="analytics" aria-labelledby="analytics-title">
+      <header class="section-header">
+        <h2 id="analytics-title" class="section-header__title">Key Metrics</h2>
+        <p class="section-header__lede">Snapshot of the current cycle. Hover any tile for source-of-record information.</p>
+      </header>
+
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi__label">Total Applicants</div>
+          <div class="kpi__value">1,247</div>
+          <div class="kpi__delta kpi__delta--up">&#9650; 6.2% vs last cycle</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__label">Active Searches</div>
+          <div class="kpi__value">18</div>
+          <div class="kpi__delta">Across 7 schools</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__label">Departments Hiring</div>
+          <div class="kpi__value">12</div>
+          <div class="kpi__delta">4 open ranks, 8 tenure-track</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__label">Pipeline Match Score</div>
+          <div class="kpi__value">84<span class="kpi__unit">%</span></div>
+          <div class="kpi__delta kpi__delta--up">&#9650; 3 pts vs benchmark</div>
+        </div>
+      </div>
+
+      <div class="chart-grid">
+        <figure class="chart">
+          <figcaption class="chart__caption">Applicant Demographics</figcaption>
+          <svg viewBox="0 0 200 200" class="chart__svg" role="img" aria-label="Demographic breakdown donut chart">
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#D9D9D9" stroke-width="22" />
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#00205B" stroke-width="22"
+                    stroke-dasharray="170 440" transform="rotate(-90 100 100)" />
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#0A509E" stroke-width="22"
+                    stroke-dasharray="110 440" stroke-dashoffset="-170" transform="rotate(-90 100 100)" />
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#7a9cc6" stroke-width="22"
+                    stroke-dasharray="80 440" stroke-dashoffset="-280" transform="rotate(-90 100 100)" />
+            <text x="100" y="96" text-anchor="middle" font-size="22" font-weight="700" fill="#00205B">1,247</text>
+            <text x="100" y="118" text-anchor="middle" font-size="11" fill="#555">applicants</text>
+          </svg>
+          <ul class="chart__legend">
+            <li><span class="legend-swatch" style="background:#00205B"></span> Domestic</li>
+            <li><span class="legend-swatch" style="background:#0A509E"></span> International</li>
+            <li><span class="legend-swatch" style="background:#7a9cc6"></span> Unreported</li>
+          </ul>
+        </figure>
+
+        <figure class="chart">
+          <figcaption class="chart__caption">Institution Ranking Distribution</figcaption>
+          <svg viewBox="0 0 320 180" class="chart__svg" role="img" aria-label="Bar chart of applicant PhD institutions by ranking tier">
+            <g fill="#0A509E">
+              <rect x="20"  y="40"  width="32" height="120" />
+              <rect x="70"  y="60"  width="32" height="100" />
+              <rect x="120" y="80"  width="32" height="80" />
+              <rect x="170" y="95"  width="32" height="65" />
+              <rect x="220" y="110" width="32" height="50" />
+              <rect x="270" y="130" width="32" height="30" />
+            </g>
+            <line x1="10" y1="160" x2="315" y2="160" stroke="#999" stroke-width="1" />
+            <g font-size="10" fill="#555" text-anchor="middle">
+              <text x="36"  y="174">Top 10</text>
+              <text x="86"  y="174">11–25</text>
+              <text x="136" y="174">26–50</text>
+              <text x="186" y="174">51–100</text>
+              <text x="236" y="174">101–200</text>
+              <text x="286" y="174">200+</text>
+            </g>
+          </svg>
+        </figure>
+
+        <figure class="chart">
+          <figcaption class="chart__caption">Search Comparison</figcaption>
+          <svg viewBox="0 0 320 180" class="chart__svg" role="img" aria-label="Grouped bar chart comparing current and prior search">
+            <g>
+              <rect x="30"  y="60"  width="20" height="100" fill="#00205B" />
+              <rect x="52"  y="80"  width="20" height="80"  fill="#7a9cc6" />
+              <rect x="100" y="50"  width="20" height="110" fill="#00205B" />
+              <rect x="122" y="70"  width="20" height="90"  fill="#7a9cc6" />
+              <rect x="170" y="40"  width="20" height="120" fill="#00205B" />
+              <rect x="192" y="62"  width="20" height="98"  fill="#7a9cc6" />
+              <rect x="240" y="70"  width="20" height="90"  fill="#00205B" />
+              <rect x="262" y="90"  width="20" height="70"  fill="#7a9cc6" />
+            </g>
+            <line x1="20" y1="160" x2="300" y2="160" stroke="#999" stroke-width="1" />
+            <g font-size="10" fill="#555" text-anchor="middle">
+              <text x="51"  y="174">CS</text>
+              <text x="121" y="174">ECE</text>
+              <text x="191" y="174">Stat</text>
+              <text x="261" y="174">Math</text>
+            </g>
+          </svg>
+          <ul class="chart__legend">
+            <li><span class="legend-swatch" style="background:#00205B"></span> Current Cycle</li>
+            <li><span class="legend-swatch" style="background:#7a9cc6"></span> Prior Cycle</li>
+          </ul>
+        </figure>
+
+        <figure class="chart">
+          <figcaption class="chart__caption">Historical Hiring Trends</figcaption>
+          <svg viewBox="0 0 320 180" class="chart__svg" role="img" aria-label="Line chart of historical faculty hires">
+            <polyline fill="none" stroke="#0A509E" stroke-width="2.4"
+                      points="20,130 60,110 100,118 140,95 180,82 220,78 260,60 300,55" />
+            <polyline fill="none" stroke="#00205B" stroke-width="2.4" stroke-dasharray="4 3"
+                      points="20,140 60,128 100,120 140,108 180,100 220,92 260,82 300,72" />
+            <g fill="#0A509E">
+              <circle cx="20" cy="130" r="3" /><circle cx="60" cy="110" r="3" />
+              <circle cx="100" cy="118" r="3" /><circle cx="140" cy="95" r="3" />
+              <circle cx="180" cy="82" r="3" /><circle cx="220" cy="78" r="3" />
+              <circle cx="260" cy="60" r="3" /><circle cx="300" cy="55" r="3" />
+            </g>
+            <line x1="10" y1="160" x2="315" y2="160" stroke="#999" stroke-width="1" />
+            <g font-size="10" fill="#555" text-anchor="middle">
+              <text x="20"  y="174">'17</text>
+              <text x="60"  y="174">'18</text>
+              <text x="100" y="174">'19</text>
+              <text x="140" y="174">'20</text>
+              <text x="180" y="174">'21</text>
+              <text x="220" y="174">'22</text>
+              <text x="260" y="174">'23</text>
+              <text x="300" y="174">'24</text>
+            </g>
+          </svg>
+          <ul class="chart__legend">
+            <li><span class="legend-swatch" style="background:#0A509E"></span> Offers Extended</li>
+            <li><span class="legend-swatch" style="background:#00205B"></span> Hires Accepted</li>
+          </ul>
+        </figure>
+      </div>
+    </section>
+
+    <!-- AI Assistant -->
+    <section class="assistant" id="ai-insights" aria-labelledby="assistant-title">
+      <header class="section-header">
+        <h2 id="assistant-title" class="section-header__title">AI Search Assistant</h2>
+        <p class="section-header__lede">Ask a question to surface tailored analytics, draft committee language, or compare against benchmarks.</p>
+      </header>
+
+      <div class="assistant__panel">
+        <div class="assistant__transcript" id="assistantTranscript" aria-live="polite">
+          <div class="assistant__msg assistant__msg--bot">
+            <div class="assistant__avatar" aria-hidden="true">RA</div>
+            <div class="assistant__bubble">
+              <p>Good morning. I'm the Rice Faculty Search Co-Pilot. I can summarize applicant pools, benchmark against IPEDS peer institutions, or draft text for your committee report. How can I help?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="assistant__prompts" role="group" aria-label="Suggested prompts">
+          <button type="button" class="prompt-chip">Compare our applicant pool against national trends</button>
+          <button type="button" class="prompt-chip">Summarize diversity metrics</button>
+          <button type="button" class="prompt-chip">Find strongest pipeline matches</button>
+          <button type="button" class="prompt-chip">Generate hiring report</button>
+        </div>
+
+        <form class="assistant__input" id="assistantForm" autocomplete="off">
+          <label for="assistantInput" class="visually-hidden">Ask the Co-Pilot</label>
+          <input id="assistantInput" name="prompt" type="text" placeholder="Ask the Co-Pilot a question…" />
+          <button type="submit" class="btn btn--primary assistant__send">
+            Send
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 11.5 L20 4 L13 21 L11 13 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </form>
+
+        <p class="assistant__note">Responses are generated by the Co-Pilot's evaluation layer (Microsoft Copilot &amp; Gemini) and grounded in Rice's authorized data sources. Always review before sharing with the committee.</p>
+      </div>
+    </section>
+
+    <!-- Architecture -->
+    <section class="architecture" id="architecture" aria-labelledby="arch-title">
+      <header class="section-header">
+        <h2 id="arch-title" class="section-header__title">Platform Architecture</h2>
+        <p class="section-header__lede">A layered architecture connecting Rice's authoritative sources to a secure analytics and AI layer.</p>
+      </header>
+
+      <div class="arch-grid">
+        <article class="arch-card">
+          <div class="arch-card__badge">01</div>
+          <h3 class="arch-card__title">Data Sources</h3>
+          <ul class="arch-card__list">
+            <li>Interfolio (Faculty Search)</li>
+            <li>IPEDS (Peer Institutions)</li>
+            <li>ProQuest Dissertations</li>
+            <li>Rice HR &amp; Workday</li>
+            <li>CSV / Spreadsheet Imports</li>
+          </ul>
+        </article>
+
+        <article class="arch-card">
+          <div class="arch-card__badge">02</div>
+          <h3 class="arch-card__title">Backend Services</h3>
+          <ul class="arch-card__list">
+            <li>ETL &amp; Normalization Pipeline</li>
+            <li>PostgreSQL Analytics Store</li>
+            <li>FastAPI Service Layer</li>
+            <li>Rice SSO Authentication</li>
+            <li>Audit Logging &amp; Access Controls</li>
+          </ul>
+        </article>
+
+        <article class="arch-card">
+          <div class="arch-card__badge">03</div>
+          <h3 class="arch-card__title">AI Layer</h3>
+          <ul class="arch-card__list">
+            <li>Microsoft Copilot Orchestration</li>
+            <li>Gemini Evaluation Models</li>
+            <li>Natural-Language Query Parsing</li>
+            <li>Job-to-Pipeline Matching</li>
+            <li>Bias &amp; Equity Guardrails</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============= FOOTER ============= -->
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="site-footer__top-inner">
+        <h2 class="footer-helpful">
+          <span class="footer-helpful__accent">Helpful</span> Links
+        </h2>
+        <ul class="footer-links">
+          <li><a href="#">Provost's Office</a></li>
+          <li><a href="#">University Policies</a></li>
+          <li><a href="#">Faculty Senate</a></li>
+          <li><a href="#">Faculty Handbook</a></li>
+          <li><a href="#">Fondren Library</a></li>
+          <li><a href="#">Research Repository</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="#">Faculty Club</a></li>
+          <li><a href="#">Faculty Ombuds Office</a></li>
+          <li><a href="#">General Announcement</a></li>
+          <li><a href="#">Visit Houston</a></li>
+          <li><a href="#">VPAA Help Desk</a></li>
+          <li><a href="#">Interfolio</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="site-footer__bottom-inner">
+        <a href="https://www.rice.edu" class="site-footer__wordmark" aria-label="Rice University">
+          <img src="assets/rice-university-logo-trimmed.png?v=7" alt="Rice University" />
+        </a>
+        <div class="site-footer__address">
+          <div class="site-footer__address-line">
+            6100 Main St., Houston, TX 77005-1827 &nbsp;|&nbsp; Mailing Address: P.O. Box 1892, Houston, TX 77251-1892 &nbsp;|&nbsp; 713-348-0000
+          </div>
+          <div class="site-footer__address-links">
+            <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Campus Carry</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=9"></script>
+</body>
+</html>
