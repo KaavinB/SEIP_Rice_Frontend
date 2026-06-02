@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Co-Pilot Dashboard | Faculty Search Co-Pilot | Rice University</title>
   <meta name="description" content="Analytics, AI insights, and platform information for the Rice Faculty Search Co-Pilot." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=14" />
+  <link rel="stylesheet" href="fonts.css?v=1" />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/lato-400.woff2" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-500.woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css?v=16" />
 </head>
 <body>
 
@@ -46,17 +46,63 @@
       </div>
     </div>
 
-    <nav id="primary-menu" class="primary-menu" hidden aria-label="Primary">
-      <ul>
-        <li><a href="index.html">Open Positions</a></li>
-        <li><a href="dashboard.html">Co-Pilot Dashboard</a></li>
-        <li><a href="#analytics">Analytics</a></li>
-        <li><a href="#ai-insights">AI Insights</a></li>
-        <li><a href="#architecture">Platform</a></li>
-        <li><a href="index.html#admin">Administration</a></li>
-      </ul>
-    </nav>
   </header>
+
+  <!-- ============= MENU OVERLAY ============= -->
+  <div id="primary-menu" class="menu-overlay" aria-hidden="true" aria-label="Site menu">
+    <div class="menu-overlay__topbar">
+      <button class="icon-btn" type="button" aria-label="Share this page" tabindex="-1">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.4" />
+          <circle cx="7" cy="12" r="1.8" fill="currentColor" />
+          <circle cx="15.5" cy="7.5" r="1.8" fill="currentColor" />
+          <circle cx="15.5" cy="16.5" r="1.8" fill="currentColor" />
+          <line x1="8.6" y1="11.1" x2="14" y2="8.4" stroke="currentColor" stroke-width="1.2" />
+          <line x1="8.6" y1="12.9" x2="14" y2="15.6" stroke="currentColor" stroke-width="1.2" />
+        </svg>
+      </button>
+      <button class="icon-btn" type="button" aria-label="Search" tabindex="-1">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.4" />
+          <circle cx="11" cy="11" r="3.6" fill="none" stroke="currentColor" stroke-width="1.4" />
+          <line x1="13.7" y1="13.7" x2="16.5" y2="16.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+        </svg>
+      </button>
+      <button class="menu-overlay__close" type="button" aria-label="Close menu" data-menu-close>
+        <span>CLOSE</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 5 L19 19 M19 5 L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="menu-overlay__grid">
+      <nav class="menu-overlay__panel menu-overlay__panel--image" aria-label="Co-Pilot sections">
+        <img src="assets/rice-campus.png" alt="" aria-hidden="true" />
+        <ul class="menu-overlay__list menu-overlay__list--right">
+          <li><a href="index.html">Open Positions</a></li>
+          <li><a href="dashboard.html">Co-Pilot Dashboard</a></li>
+          <li><a href="dashboard.html#analytics">Analytics</a></li>
+          <li><a href="dashboard.html#ai-insights">AI Insights</a></li>
+          <li><a href="dashboard.html#architecture">Platform</a></li>
+          <li><a href="index.html#admin">Administration</a></li>
+        </ul>
+      </nav>
+
+      <nav class="menu-overlay__panel menu-overlay__panel--white" aria-label="Rice resources">
+        <ul class="menu-overlay__list menu-overlay__list--left">
+          <li><a href="https://www.rice.edu">Home</a></li>
+          <li><a href="#">Provost's Office</a></li>
+          <li><a href="#">Faculty</a></li>
+          <li><a href="#">Faculty Handbook</a></li>
+          <li><a href="#">Search Guidelines</a></li>
+          <li><a href="#">Forms</a></li>
+          <li><a href="#">VPAA Help Desk</a></li>
+          <li><a href="#">Interfolio</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
   <!-- ============= HERO ============= -->
   <section class="hero hero--short" aria-labelledby="hero-title">
@@ -377,6 +423,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=15"></script>
 </body>
 </html>

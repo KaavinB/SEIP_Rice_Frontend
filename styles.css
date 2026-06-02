@@ -134,29 +134,124 @@ button { font-family: inherit; cursor: pointer; }
 }
 .menu-btn:hover .menu-btn__icon span { background: var(--blue); }
 
-.primary-menu {
-  border-top: 1px solid var(--border);
-  background: var(--light-gray);
-  padding: 16px 32px;
+/* ---------- Menu overlay ---------- */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease-out, visibility 0s linear 0.28s;
 }
-.primary-menu ul {
-  max-width: var(--max-width);
-  margin: 0 auto;
+.menu-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.28s ease-out, visibility 0s linear 0s;
+}
+body.menu-open { overflow: hidden; }
+
+.menu-overlay__topbar {
+  position: absolute;
+  top: 0; right: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 32px;
+  height: auto;
+}
+
+.menu-overlay__close {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 0;
+  color: var(--navy);
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.menu-overlay__close:hover { color: var(--blue); }
+.menu-overlay__close svg { width: 22px; height: 22px; }
+
+.menu-overlay__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-overlay__panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 100px clamp(48px, 8vw, 140px) 80px;
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+.menu-overlay__panel--image {
+  justify-content: flex-end;
+  background: var(--navy);
+}
+.menu-overlay__panel--image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.menu-overlay__panel--image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(0,21,65,0.45), rgba(0,21,65,0.65));
+}
+.menu-overlay__panel--white {
+  background: #ffffff;
+  justify-content: flex-start;
+}
+
+/* Slide-in animation for panels */
+.menu-overlay__panel--image  { transform: translateX(-28px); opacity: 0; }
+.menu-overlay__panel--white  { transform: translateX(28px);  opacity: 0; }
+.menu-overlay.is-open .menu-overlay__panel {
+  transform: translateX(0);
+  opacity: 1;
+  transition:
+    transform 0.42s cubic-bezier(0.22, 0.8, 0.3, 1) 0.05s,
+    opacity  0.32s ease-out 0.05s;
+}
+
+.menu-overlay__list {
+  position: relative;
+  z-index: 2;
   list-style: none;
+  margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px 28px;
+  flex-direction: column;
+  gap: 14px;
 }
-.primary-menu a {
+.menu-overlay__list--right { text-align: right; }
+.menu-overlay__list a {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.4vw, 34px);
+  font-weight: 500;
   text-decoration: none;
-  color: var(--navy);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  transition: color 0.15s;
+  display: inline-block;
 }
-.primary-menu a:hover { color: var(--blue); }
+.menu-overlay__list--right a { color: #ffffff; }
+.menu-overlay__list--left  a { color: var(--navy); }
+.menu-overlay__list a:hover,
+.menu-overlay__list a:focus-visible { color: #A5C151; }
 
 /* ---------- Hero ---------- */
 .hero {
@@ -856,6 +951,17 @@ button { font-family: inherit; cursor: pointer; }
   .chart-grid { grid-template-columns: 1fr; }
   .admin-strip { margin: 0 -22px; padding: 28px 22px; }
   .admin-strip__inner { grid-template-columns: 1fr; }
+  .menu-overlay__grid { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+  .menu-overlay__panel { padding: 80px 28px 32px; }
+  .menu-overlay__panel--white { padding-top: 32px; padding-bottom: 64px; }
+  .menu-overlay__list--right,
+  .menu-overlay__list--left { text-align: left; }
+  .menu-overlay__panel--image { justify-content: flex-start; }
+  .menu-overlay__panel--white { justify-content: flex-start; }
+  .menu-overlay__list { gap: 10px; }
+  .menu-overlay__list a { font-size: 22px; }
+  .menu-overlay__topbar { padding: 12px 22px; }
+
   .site-footer__top-inner { grid-template-columns: 1fr; padding: 44px 22px 52px; gap: 28px; }
   .site-footer__bottom-inner { padding: 24px 22px 28px; }
   .footer-helpful { font-size: 36px; }

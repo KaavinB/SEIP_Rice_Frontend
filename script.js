@@ -5,20 +5,39 @@
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  // ---------- Mobile menu toggle ----------
+  // ---------- Full-screen menu overlay ----------
   var menuBtn = document.querySelector('.menu-btn');
   var primaryMenu = document.getElementById('primary-menu');
   if (menuBtn && primaryMenu) {
+    var closeBtn = primaryMenu.querySelector('[data-menu-close]');
+
+    function openMenu() {
+      primaryMenu.classList.add('is-open');
+      primaryMenu.setAttribute('aria-hidden', 'false');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('menu-open');
+    }
+    function closeMenu() {
+      primaryMenu.classList.remove('is-open');
+      primaryMenu.setAttribute('aria-hidden', 'true');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    }
+
     menuBtn.addEventListener('click', function () {
-      var expanded = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-expanded', String(!expanded));
-      primaryMenu.hidden = expanded;
+      if (primaryMenu.classList.contains('is-open')) closeMenu();
+      else openMenu();
     });
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
     primaryMenu.addEventListener('click', function (e) {
-      if (e.target && e.target.tagName === 'A') {
-        menuBtn.setAttribute('aria-expanded', 'false');
-        primaryMenu.hidden = true;
+      var t = e.target;
+      while (t && t !== primaryMenu) {
+        if (t.tagName === 'A') { closeMenu(); break; }
+        t = t.parentNode;
       }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && primaryMenu.classList.contains('is-open')) closeMenu();
     });
   }
 
