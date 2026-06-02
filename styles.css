@@ -81,7 +81,7 @@ button { font-family: inherit; cursor: pointer; }
   text-decoration: none;
 }
 .brand__lockup {
-  height: 78px;
+  height: 125px;
   width: auto;
   display: block;
   flex-shrink: 0;
@@ -257,11 +257,11 @@ body.menu-open { overflow: hidden; }
 .hero {
   position: relative;
   width: 100%;
-  height: 380px;
+  height: 266px;
   overflow: hidden;
   background: #001541;
 }
-.hero--short { height: 260px; }
+.hero--short { height: 182px; }
 .hero__image {
   position: absolute;
   inset: 0;
@@ -937,11 +937,11 @@ body.menu-open { overflow: hidden; }
 
 @media (max-width: 820px) {
   .site-header__inner { padding: 12px 22px; gap: 14px; }
-  .brand__lockup { height: 56px; }
+  .brand__lockup { height: 90px; }
   .icon-btn { width: 32px; height: 32px; }
   .icon-btn svg { width: 22px; height: 22px; }
 
-  .hero { height: 280px; }
+  .hero { height: 196px; }
   .secondary-nav__list { padding: 14px 18px; gap: 4px 6px; }
   .secondary-nav a { padding: 5px 8px; font-size: 12px; letter-spacing: 0.1em; }
   .secondary-nav__sep { display: none; }
@@ -978,8 +978,8 @@ body.menu-open { overflow: hidden; }
 }
 
 @media (max-width: 560px) {
-  .brand__lockup { height: 46px; }
+  .brand__lockup { height: 74px; }
   .kpi-grid { grid-template-columns: 1fr 1fr; }
-  .hero { height: 240px; }
+  .hero { height: 168px; }
   .menu-btn__label { display: none; }
 }
